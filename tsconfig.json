@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "allowUnreachableCode": true, // 允许未执行的代码不报错
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "commonjs",// 编译出的代码采用的模块规范
+    "removeComments": true,// 删除注释
+    "importHelpers": true, // 减少代码的冗余，类似：@babel/plugin-transform-runtime
+    "preserveConstEnums": false, // 保留 const和 enum声明
+    "sourceMap": true,// 生成sourceMap 
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

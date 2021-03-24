@@ -1,7 +1,7 @@
 
 # About
 
-此项目是 react + webpack 快速构建项目 已初始化路由，开发环境，生产环境，依赖配置生成文件
+此项目是 typescript + react + webpack 快速构建项目 已初始化路由，开发环境，生产环境，依赖配置生成文件
 
 
 # 说明
@@ -18,16 +18,16 @@
 
 ## 技术栈
 
-react + vuex + react-router + webpack + ES7 + sass
+typescript + react + vuex + react-router + webpack + ES7 + sass
 
 
 ## 项目运行
 
 
 ```
-git clone https://github.com/evenjxr/react-spa.git  
+git clone https://github.com/evenjxr/ts-react-spa.git  
 
-cd react-spa  
+cd ts-react-spa  
 
 npm install
 
