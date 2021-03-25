@@ -30,7 +30,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(jsx|js|ts|tsx)$/,
+        test: /\.(ts|tsx)$/,
         enforce: "pre",
         loader: [
           "babel-loader",

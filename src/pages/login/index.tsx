@@ -1,42 +1,42 @@
-import React, { Component } from 'react';
-import Inputs from './Components/Inputs'
-import './index.scss';
-import { hot } from 'react-hot-loader/root';
-
-
+import React, { Component } from "react";
+import Inputs from "./Components/Inputs";
+import "./index.scss";
 class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      pageName: '登录1',
-      timer: 0,
-      step: 1
-    }
-  }
+  private timer: any;
+  state = {
+    pageName: "登录1",
+    timer: 0,
+    step: 1
+  };
 
   componentDidMount() {
-    setInterval(() => {
+    this.timer = setInterval(() => {
       this.setState({
         timer: this.state.timer + this.state.step
-      })
-    }, 1000)
+      });
+    }, 1000);
     this.setState({
-      pageName: 'hello'
-    })
+      pageName: "hello"
+    });
   }
+
+  click = () => {
+    console.log(11111);
+    clearInterval(this.timer);
+  };
 
   render() {
-    const {timer} = this.state;
+    const { timer } = this.state;
     return (
       <>
-        <h1 className="login">{this.state.pageName}</h1>
-        <a>你</a>
+        <h1 className="login">{this.state.pageName}1</h1>
+        <a>hello world</a>
         <Inputs />
         <h1>{timer}</h1>
+        <button onClick={this.click}>reset</button>
       </>
-    )
+    );
   }
-
 }
 
-export default hot(Login)
+export default Login;

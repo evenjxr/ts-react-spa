@@ -1,12 +1,13 @@
 import React, { lazy, Suspense } from "react";
 import { Switch, Route, HashRouter, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
+import { hot } from "react-hot-loader/root";
 
 const Login = lazy(() => import("./pages/login/index"));
 const User = lazy(() => import("./pages/user/index"));
 const Error = lazy(() => import("./pages/error/index"));
 
-export default function AppRoutes() {
+function AppRoutes() {
   return (
     <HashRouter>
       <Suspense fallback={<div>Loading...</div>}>
@@ -40,3 +41,5 @@ AuthRoute.propTypes = {
 function hasAuth() {
   return false;
 }
+
+export default hot(AppRoutes);
